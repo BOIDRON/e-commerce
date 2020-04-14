@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.nom }} | {{ parent() }}{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid ">
+    <div class="container">
+        <div class="row">
+        {# boucle for afin d'afficher les articles #}
+            <div class="col-12 mt-5 mb-3">
+                {# <h1>{{ category.nom }}</h1> #}
+            </div>
+        </div>
+        <div class=" row">
+            <div class="col-6">
+                {# gestion de l'url : dossier uploads/table article col picture #}
+                <img src="{{ asset('uploads/' ~ product.image) }}" class="image-page-produit"  title="{{ product.nom }}" alt="image {{ product.nom  }}">
+            </div>
+            <div class="col-6">
+                <h2>{{ product.nom }}</h2>
+                <p>{{ product.description }}</p>
+                <p>{{ product.prix }} €</p>
+                <a href=" {{ path('add_panier',{'id': product.id }) }} " class="btn btn-info">
+                    <i class="fas fa-shopping-cart mr-1"></i> Ajouter
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
