@@ -30,14 +30,14 @@
                             <tr>
                                 <td><img src="{{ asset('uploads/') ~ item.product.image }}" alt="{{ item.product.nom }}" width="50" height="50"></td>
                                 <td>{{ item.product.nom }}</td>
-                                <td>{{ item.product.prix }} €</td>
+                                <td>{{ item.product.price }} €</td>
                                 <td>{{ item.quantity }}</td>
                                 <td>
                                     <a href=" {{path('panier_remove', {'id' : item.product.id})}} " class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </td>
-                                <td>{{ item.product.prix * item.quantity }} €</td>
+                                <td>{{ item.product.price * item.quantity }} €</td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -55,7 +55,7 @@
                     </table>
                     <div class="d-flex justify-content-between">
                             <a class="text-decoration-none add-category" href="{{path('index')}}"><i class="fas fa-arrow-left mr-2"></i>Retour à la boutique</a>
-                            <a href="" class="btn btn-info ">Valider mon panier</a>
+                            <a href="{{path('order')}}" class="btn btn-info ">Valider mon panier</a>
                     </div>
                     
                     {% else %}

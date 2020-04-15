@@ -72,7 +72,7 @@ class OrderDetail
         return $this->price;
     }
 
-    public function setPrice(float $price): self
+    public function setPrice(?object $price): self
     {
         $this->price = $price;
 

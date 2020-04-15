@@ -20,9 +20,9 @@
             <div class="col-6">
                 <h2>{{ product.nom }}</h2>
                 <p>{{ product.description }}</p>
-                <p>{{ product.prix }} €</p>
+                <p>{{ product.price }} €</p>
                 <a href=" {{ path('add_panier',{'id': product.id }) }} " class="btn btn-info">
-                    <i class="fas fa-shopping-cart mr-1"></i> Ajouter
+                    Ajouter <i class="fas fa-cart-plus mr-1"></i> 
                 </a>
             </div>
         </div>
